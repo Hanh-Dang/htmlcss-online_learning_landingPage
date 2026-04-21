@@ -1,1 +1,105 @@
+*{
+    box-sizing: border-box;
+}
 
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Common */
+a{
+    text-decoration: none;
+}
+
+.main-content{
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn{
+    display: inline-block;
+    
+}
+
+/* Header */
+.header.fixed{
+    position: sticky;
+    top: -28px;
+    z-index: 100;
+}
+
+.header .body{
+    display: flex;
+    align-items: center;
+    padding-top: 52px;
+}
+
+.header .body .logo{
+    width: 127px;
+    height: 37px;
+}
+
+.header .nav{
+    margin-left: auto;
+}
+
+.nav ul{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.nav a{
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #2F3A3B;
+}
+
+.nav a:hover,.header .action .sign-in-btn:hover,
+.nav li.active a{
+    /* font-weight: 600; - dung hieu ung in dam gia box-shadow de chu khong bi xo */
+    text-shadow: 1px 0 0 currentColor;
+    color: #2F3A3B;
+}
+
+.header .action{
+    margin-left: 177px;
+    display: flex;
+    align-items: center;
+}
+
+.header .action .sign-in-btn {
+    color: #494949;
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin-right: 24px;
+    transition: all 0.25s ease;
+}
+
+.header .action .sign-up-btn {
+    /* Dùng flexbox để căn giữa chữ vào giữa nút dễ dàng hơn dùng padding */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 108px;
+    height: 48px;
+    color: #1EBFC1;
+    font-weight: 600;
+    font-size: 1.6rem;
+    /* Đặt sẵn viền trong suốt để chống xô lệch khi hover */
+    border: 1px solid #1EBFC1;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+}
+
+.header .action .sign-up-btn:hover {
+    background-color: #1EBFC1;
+    color: #fff;
+}
